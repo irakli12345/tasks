@@ -3,15 +3,29 @@ import Tasks from "./components/Tasks";
 import { useState } from "react";
 function App() {
   const [tasks, setTasks] = useState([
-    { text: "Bugidibu", id: 1, date: "2021-08-02" },
-    { text: "Ha ha yu dead", id: 2, date: "2021-08-03" },
-    { text: "Cocoa Latte", id: 3, date: "2021-08-03" },
-    { text: "Yass queen", id: 4, date: "2021-08-04" },
+    { text: "Bugidibu", id: 1, date: "2021-08-02", reminder: true },
+    { text: "Ha ha yu dead", id: 2, date: "2021-08-03", reminder: true },
+    { text: "Cocoa Latte", id: 3, date: "2021-08-03", reminder: true },
+    { text: "Yass queen", id: 4, date: "2021-08-04", reminder: true },
   ]);
+  const deleteTask = (id) => {
+    setTasks(tasks.filter((task) => task.id !== id));
+  };
+  const toggleReminder = (id) => {
+    setTasks(
+      tasks.map((task) =>
+        task.id === id ? { ...task, reminder: !task.reminder } : task
+      )
+    );
+  };
   return (
     <div className="container">
       <Header></Header>
-      <Tasks tasks={tasks} />
+      {tasks.length > 0 ? (
+        <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
+      ) : (
+        "Nothing to see here"
+      )}
     </div>
   );
 }
