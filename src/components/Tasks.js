@@ -1,15 +1,11 @@
-const tasks = [
-  { text: "Bugidibu" },
-  { text: "Ha ha yu dead" },
-  { text: "Cocoa Latte" },
-  { text: "Yass queen" },
-];
-function Tasks() {
+import Task from "./Task";
+
+function Tasks({ tasks }) {
   return (
     <>
-      {tasks.map((task) => {
-        <h3>task.text</h3>;
-      })}
+      {tasks.map((task) => (
+        <Task key={task.id} task={task} />
+      ))}
     </>
   );
 }
