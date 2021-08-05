@@ -1,6 +1,22 @@
 {
-  "tasks": [{ "text": "Bugidibu", "id": 1, "date": "2021-08-02", "reminder": true },
-    { "text": "Ha ha yu dead", "id": 2, "date": "2021-08-03", "reminder": true },
-    { "text": "Cocoa Latte", "id": 3, "date": "2021-08-03", "reminder": true },
-    { "text": "Yass queen", "id": 4, "date": "2021-08-04", "reminder": true }]
+  "tasks": [
+    {
+      "text": "Cocoa Latte",
+      "id": 3,
+      "date": "2021-08-03",
+      "reminder": false
+    },
+    {
+      "text": "fds",
+      "date": "fdsght",
+      "reminder": true,
+      "id": 4
+    },
+    {
+      "text": "Grab Coca Cola",
+      "date": "Tomorrow 3 PM",
+      "reminder": true,
+      "id": 5
+    }
+  ]
 }
