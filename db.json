@@ -1,18 +1,6 @@
 {
   "tasks": [
     {
-      "text": "Cocoa Latte",
-      "id": 3,
-      "date": "2021-08-03",
-      "reminder": false
-    },
-    {
-      "text": "fds",
-      "date": "fdsght",
-      "reminder": true,
-      "id": 4
-    },
-    {
       "text": "Grab Coca Cola",
       "date": "Tomorrow 3 PM",
       "reminder": true,
